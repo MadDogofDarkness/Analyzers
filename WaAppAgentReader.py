@@ -8,6 +8,7 @@ def help():
                                                                      -W shows WARN alerts
                                                                      -H shows HEART alerts
                                                                      -I shows INFO alerts
+                                                                     -E shows ERROR alerts
                                                                      -G shows FATAL, WARN, and INFO alerts (V 1.0 only)
                                                                     omitting this tag will show all alerts
                                                 note as of this release (V1.0) you can use them as seperate flags
@@ -66,20 +67,15 @@ if __name__ == '__main__':
             elif arg == "-F":
                 alerts.append("FATAL")
             elif arg == "-W":
-                alerts.append("FATAL")
                 alerts.append("WARN")
             elif arg == "-H":
-                alerts.append("FATAL")
                 alerts.append("HEART")
-                alerts.append("WARN")
             elif arg == "-I":
-                alerts.append("FATAL")
-                alerts.append("HEART")
                 alerts.append("INFO")
-                alerts.append("WARN")
             elif arg == "-G":
                 alerts.append("FATAL")
                 alerts.append("WARN")
+                alerts.append("ERROR")
                 alerts.append("INFO")
             elif arg == "-E":
                 alerts.append("ERROR")
